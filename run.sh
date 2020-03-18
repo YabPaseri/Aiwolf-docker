@@ -1,0 +1,1 @@
+docker run -it --rm -v $PWD/SampleSetting.cfg:/home/aiwolf-platform/SampleSetting.cfg -v $PWD/AutoStarter.ini:/home/aiwolf-platform/AutoStarter.ini -v $PWD/agent:/home/aiwolf-platform/agent -v $PWD/log:/home/aiwolf-platform/log --name ${1:-AiwolfDocker} ${2:-aiwolf-docker-image:latest}
