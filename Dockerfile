@@ -347,5 +347,5 @@ RUN rm /home/aiwolf-platform/AutoStarter.ini && \
 # Remake AutoStarter.sh
 RUN echo 'java -cp /home/aiwolf-platform/aiwolf-server.jar:/home/aiwolf-platform/aiwolf-common.jar:/home/aiwolf-platform/aiwolf-client.jar:/home/aiwolf-platform/aiwolf-viewer.jar:/home/aiwolf-platform/jsonic-1.3.10.jar org.aiwolf.ui.bin.AutoStarter /home/aiwolf-platform/AutoStarter.ini' > /home/aiwolf-platform/AutoStarter.sh
 
-
-CMD [ "/bin/bash", "/home/aiwolf-platform/AutoStarter.sh" ]
+# "conda run"で実行する
+CMD [ "conda", "run", "-n", "aiwolf", "/bin/bash", "/home/aiwolf-platform/AutoStarter.sh" ]
